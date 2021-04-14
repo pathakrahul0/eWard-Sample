@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">eWard Sample</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="yes_internet">Back to Online</string>
+</resources>
