@@ -31,7 +31,11 @@ class MainViewModel @Inject constructor(
     fun getEmployees() = viewModelScope.launch {
         mainRepository.getEmployee().let {
             it.body().let { userList ->
-                _userList.postValue(userList!!)
+                try {
+                    _userList.postValue(userList!!)
+                } catch (e: Exception) {
+                    Log.i("Error", "Something error")
+                }
             }
         }
     }
